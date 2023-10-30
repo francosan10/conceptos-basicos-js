@@ -27,3 +27,12 @@ do {
     contador++;
 } while (contador <=10);
 
+/*
+for (inicializar variable ; condicion logica ; decrementar o incrementar) {
+    todo el codigo que quiero repetir varias veces
+}
+ */
+
+for (let cuentaRegresiva = 10; cuentaRegresiva > 0 ; cuentaRegresiva--) {
+    document.write(`<p>Cuenta regresiva número ${cuentaRegresiva} (bucle for)</p>`);
+}
