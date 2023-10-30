@@ -9,14 +9,12 @@ if (condicion logica) {
 // 16 y menores de 18 es optativo, mayores de 70
 // 18 a 70 obligatorio
 
-let edad = parseInt(prompt('Ingrese su edad'));
+const edad = parseInt(prompt("Ingrese su edad"));
 
 if (edad >= 18 && edad <= 70) {
-    document.write('Debe votar');
+    document.write("Debe votar");
+} else if ((edad >= 16 && edad < 18) || edad > 70) {
+    document.write("Es optativo votar");
 } else {
-    if (edad >=16 && edad <18 || edad >70) {
-        document.write('Es optativo votar')
-    } else {
-        document.write('No debe votar');
-    }
+    document.write("No debe votar");
 }
