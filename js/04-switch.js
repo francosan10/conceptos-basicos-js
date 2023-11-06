@@ -1,13 +1,7 @@
 // 1- consulta saldo 2- ingrese dinero 3- extraiga dinero
 // como hago para ingresar y extraer dinero
 
-let opcion = prompt('seleccione una opción 1- consulta saldo, 2- ingrese dinero, 3- extraiga dinero');
-
-let saldo = 0;
-console.log(opcion);
-opcion = opcion.toLowerCase(); // transforma un string en minusculas
 // opcion = opcion.toUpperCase();  transforma un string en MAYUSCULAS
-
 
 // if (opcion === '1') {
 //     document.write(`<p>Su saldo actual es ${saldo}</p>`);
@@ -21,18 +15,43 @@ opcion = opcion.toLowerCase(); // transforma un string en minusculas
 
 // switch
 
-switch (opcion) {
-    case 'saldo':
-    case 'consultar saldo':
-    case '1':
-        document.write(`<p>Su saldo actual es ${saldo}</p>`);
-        break;
-    case '2':
-        document.write(`<p>quiere ingresar dinero</p>`);
-        break;    
-    case '3':
-        document.write(`<p>quiere extraer dinero</p>`);
-        break;
+let saldo = 0;
+
+do {
+  let opcion = prompt(
+    "seleccione una opción 1- consulta saldo, 2- ingrese dinero, 3- extraiga dinero"
+  );
+
+  console.log(opcion.toLowerCase());
+  opcion = opcion.toLowerCase(); // transforma un string en minusculas
+
+  switch (opcion) {
+    case "saldo":
+    case "consultar saldo":
+    case "1":
+      document.write(`<p>Su saldo actual es $ ${saldo}</p>`);
+      console.log(`Su saldo actual es $ ${saldo}`);
+      break;
+    case "2":
+      let deposito = parseInt(prompt("cuato deseas depositar?:"));
+      
+      console.log(isNaN('hola')) // si no es un numero devuelve true
+    // si el deposito es un numero
+      if(!isNaN(deposito) && deposito > 0) {
+      saldo += deposito;
+      document.write(
+        `<p>se ingreso $${deposito}, su saldo actual: $${saldo}</p>`
+      );
+      console.log(`ingrese dinero ${deposito}`);
+      console.log(`su saldo actual: $${saldo}`);
+    } else {
+        alert('ingreso un valor invalido');
+    }
+      break;
+    case "3":
+      document.write(`<p>quiere extraer dinero</p>`);
+      break;
     default:
-        alert('<p>selecciono una opcion incorrecta</p>');
-}
+      alert("selecciono una opcion incorrecta");
+  }
+} while (confirm("Desea realizar otra operación?"));
