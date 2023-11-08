@@ -32,6 +32,7 @@ do {
       document.write(`<p>Su saldo actual es $ ${saldo}</p>`);
       console.log(`Su saldo actual es $ ${saldo}`);
       break;
+
     case "2":
       let deposito = parseInt(prompt("cuato deseas depositar?:"));
       
@@ -48,8 +49,21 @@ do {
         alert('ingreso un valor invalido');
     }
       break;
+
     case "3":
       document.write(`<p>quiere extraer dinero</p>`);
+      let extraccion = parseInt(prompt("cuato deseas extraer?:"));
+      
+      if(!isNaN(extraccion) && extraccion > 0) {
+      saldo -= extraccion;
+      document.write(
+        `<p>se retiró $${extraccion}, su saldo actual es: $${saldo}</p>`
+      );
+      console.log(`retire dinero ${extraccion}`);
+      console.log(`su saldo actual: $${saldo}`);
+    } else {
+        alert('ingreso un valor invalido');
+    }
       break;
     default:
       alert("selecciono una opcion incorrecta");
