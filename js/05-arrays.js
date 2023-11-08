@@ -51,3 +51,13 @@ for(let indicePeliculas = 0; indicePeliculas < peliculas.length; indicePeliculas
     document.write(`<li>${peliculas[indicePeliculas]}</li>`);
 }
 document.write('<ul>');
+
+// modificar elementos del array
+peliculas[6] = 'Inception';
+
+document.write(`<h2>Lista de peliculas, modificamos el elemento de la posicion 6 del array (${peliculas.length})</h2>`);
+document.write('<ul>');
+for(let indicePeliculas = 0; indicePeliculas < peliculas.length; indicePeliculas++) {
+    document.write(`<li>${peliculas[indicePeliculas]}</li>`);
+}
+document.write('<ul>');
