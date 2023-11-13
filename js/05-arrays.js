@@ -61,3 +61,38 @@ mostrarPeliculas(`Lista de peliculas, eliminamos un elemento del array (${pelicu
 // metodo pop elimina el ultimo elemento del array
 peliculas.pop();
 mostrarPeliculas(`Lista de peliculas, eliminamos el último elemento del array (${peliculas.length})`);
+
+// filtrar todas las pelis Jurasic Park
+
+peliculas.push('Jurassic Park 1', 'Jurassic Park 2');
+peliculas.splice(2, 0, 'Jurassic Park 3');
+mostrarPeliculas('Agregamos nuevas pelis de Jurassic Park');
+
+// const pelisDeJurasicPark = peliculas.filter((pelicula) => pelicula === 'Jurassic Park');
+const pelisDeJurasicPark = peliculas.filter((pelicula) => pelicula.includes('Jurassic'));
+console.log(pelisDeJurasicPark);
+
+console.log(peliculas[peliculas.length -1].includes('Jurassic'));
+// metodos inmutables, son los que no modifican los elementos de un array.
+
+// metodo find sirve para buscar un elemento especifico del array
+
+const peliBusacda = peliculas.find( (itemPelicula) => itemPelicula === 'Interestellar');
+console.log(peliBusacda);
+
+const peliBusacda2 = peliculas.find( (itemPelicula) => itemPelicula === 'Rocky 2');
+console.log(peliBusacda2);
+
+document.write(`<p>${peliBusacda}</p>`);
+document.write(`<p>${peliBusacda2}</p>`);
+
+if (peliBusacda2 !== undefined) {
+    document.write(`<p>${peliBusacda2}</p>`);
+} else {
+    document.write('<p>No se encontro la pelicula buscada</p>');
+}
+
+// operador ternario
+// (condicion logica) ? true : false
+// const respuesta = (peliBusacda2 !== undefined) ? peliBusacda2 : 'No se encontró la peli.'
+document.write(`<p>Peli buscada: ${(peliBusacda2 !== undefined) ? peliBusacda2 : 'No se encontró la peli.'}</p>`);
