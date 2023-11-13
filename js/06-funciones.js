@@ -11,10 +11,10 @@ function saludoNuevo(nombreSolicitado, apellidoSolicitado) {
     document.write(`<p>Hola ${nombreSolicitado}, ${apellidoSolicitado} 😎</p>`);
 }
 
-function multiplicar (numero1, numero2) {
-    const resultado = numero1 * numero2;
-    return resultado;
-}
+// function multiplicar (numero1, numero2) {
+//     const resultado = numero1 * numero2;
+//     return resultado;
+// }
 
 // llamar o invocar a la funcion
 saludar();
@@ -26,6 +26,17 @@ saludoNuevo(nombre, apellido);
 saludoNuevo('jocker');
 saludoNuevo('Harry', 'Potter');
 
+// arrow functions
+// const multiplicar = (numero1, numero2) => {
+//     const resultado = numero1 * numero2;
+//     return resultado;
+// }
+
+// arrow mas simplificada
+// el return queda implicito (está aunq no lo escriba)
+const multiplicar = (numero1, numero2) => numero1 * numero2;
+
 const resultadoNuevo = multiplicar(30, 3);
 document.write(`El resultado de la multiplicacion fue ${resultadoNuevo} <br>`);
 document.write(`El resultado de la multiplicacion fue ${multiplicar(45,3)} <br>`);
+
