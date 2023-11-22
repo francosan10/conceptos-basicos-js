@@ -1,6 +1,6 @@
 // un objeto es una entidad compleja, una serie de propiedades con valores y luego una serie de metodos
 // abstraccion
-
+// se usa cuando voy a crear un solo objeto especifico
 // notacion literal
 
 const usuario = {
